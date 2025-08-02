@@ -1,538 +1,859 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="description" content="خدماتنا التعليمية المتميزة - دروس خصوصية، تعليم عن بعد، تحضير للاختبارات" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>خدماتنا - الموقع التعليمي</title>
+<html
+	lang="ar"
+	dir="rtl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="description"
+			content="خدماتنا التعليمية المتميزة - دروس خصوصية، تعليم عن بعد، تحضير للاختبارات" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>خدماتنا - الموقع التعليمي</title>
 
-  <!-- Bootstrap RTL CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
-  <!-- Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/custom.css">
-  
-  <style>
-    :root {
-      --primary-color: #00aeef;
-      --secondary-color: #0077a3;
-    }
-    
-    body {
-      font-family: 'Tajawal', sans-serif;
-    }
-    
+		<!-- Bootstrap RTL CSS -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css"
+			rel="stylesheet" />
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+		<!-- Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap"
+			rel="stylesheet" />
+		<!-- Custom CSS -->
+		<link
+			rel="stylesheet"
+			href="css/custom.css" />
 
+		<style>
+			:root {
+				--primary-color: #00aeef;
+				--secondary-color: #0077a3;
+			}
 
-    
-    .service-card {
-      background: rgb(255, 249, 249);
-      border-radius: 10px;
-      padding: 40px 30px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-      transition: all 0.3s ease;
-      height: 100%;
-      position: relative;
-      overflow: hidden;
-    }
-    
-    .service-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 4px;
-      height: 0;
-      background: var(--primary-color);
-      transition: height 0.3s ease;
-    }
-    
-    .service-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-    }
-    
-    .service-card:hover::before {
-      height: 100%;
-    }
-    
-    .service-icon {
-      width: 80px;
-      height: 80px;
-      background: var(--primary-color);
-      color: white;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 2rem;
-      margin: 0 auto 20px;
-      transition: all 0.3s ease;
-    }
-    
-    .service-card:hover .service-icon {
-      background: var(--secondary-color);
-      transform: rotate(10deg) scale(1.1);
-    }
-    
-    .floating-whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 1000;
-      background: #25d366;
-      color: white;
-      border-radius: 50px;
-      padding: 10px 20px;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: all 0.3s ease;
-    }
-    
-    .floating-whatsapp:hover {
-      background: #128c7e;
-      color: white;
-      transform: translateY(-3px);
-    }
-    
-    .floating-instagram {
-      position: fixed;
-      bottom: 20px;
-      left: 20px;
-      z-index: 1000;
-      background: #e4405f;
-      color: white;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-      transition: all 0.3s ease;
-    }
-    
-    .floating-instagram:hover {
-      background: #c13584;
-      color: white;
-      transform: scale(1.1);
-    }
-    
-    .footer {
-      background: #0f2640;
-      color: #f0f0f0;
-    }
-    
-    .footer h5 {
-      color: white;
-      position: relative;
-      padding-bottom: 10px;
-    }
-    
-    .footer h5::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      width: 50px;
-      height: 2px;
-      background: var(--primary-color);
-    }
-    
-    .footer a {
-      color: #f0f0f0;
-      text-decoration: none;
-      transition: color 0.3s ease;
-    }
-    
-    .footer a:hover {
-      color: var(--primary-color);
-    }
-    
-    .social-icons a {
-      width: 40px;
-      height: 40px;
-      background: rgba(255, 255, 255, 0.1);
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      margin-left: 10px;
-      transition: background 0.3s ease;
-    }
-    
-    .social-icons a:hover {
-      background: var(--primary-color);
-    }
-  </style>
-</head>
-<body>
+			body {
+				font-family: "Tajawal", sans-serif;
+			}
 
-  <!-- Header -->
-  <nav class="navbar navbar-expand-lg sticky-top shadow-sm" style="background-color: var(--primary-color);">
-    <div class="container">
-      <a class="navbar-brand text-white fw-bold fs-4" href="index.html">
-        <img src="logo.png" alt="Logo" height="50" class="me-2">
-      </a>
-      
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link text-white fw-bold px-3" href="index.html">الرئيسية</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fw-bold px-3" href="blog.html">المقالات</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fw-bold px-3 active" href="service.html">الخدمات</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fw-bold px-3" href="about.html">من نحن</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white fw-bold px-3" href="contact_us.html">اتصل بنا</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+			.service-card {
+				background: rgb(255, 249, 249);
+				border-radius: 10px;
+				padding: 40px 30px;
+				box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+				transition: all 0.3s ease;
+				height: 100%;
+				position: relative;
+				overflow: hidden;
+			}
 
-  <!-- Hero Section -->
-  <section class="hero-gradient text-white py-5">
-    <div class="container text-center">
-      <h1 class="display-4 fw-bold mb-4">خدماتنا</h1>
-      <p class="lead">نقدم مجموعة شاملة من الخدمات التعليمية المتميزة</p>
-    </div>
-  </section>
+			.service-card::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				width: 4px;
+				height: 0;
+				background: var(--primary-color);
+				transition: height 0.3s ease;
+			}
 
-  <!-- Services Section -->
-  <section class="py-5">
-    <div class="container">
-      <div class="row g-4">
-        <!-- Service 1 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center border-0 shadow-sm ">
-            <div class="card-body p-4">
-              <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
-                   style="width: 80px; height: 80px; background-color: var(--primary-color); color: white;">
-                <i class="fas fa-graduation-cap fa-2x"></i>
-              </div>
-              <h5 class="card-title fw-bold mb-3" style="color: var(--primary-color);">التعليم الإلكتروني</h5>
-              <p class="card-text text-muted mb-4">دورات تعليمية شاملة في مختلف المجالات مع شهادات معتمدة وتفاعل مباشر مع المدربين المتخصصين.</p>
-              <ul class="list-unstyled text-start">
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>دورات متنوعة</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>شهادات معتمدة</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>دعم فني 24/7</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Service 2 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center border-0 shadow-sm">
-            <div class="card-body p-4">
-              <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
-                   style="width: 80px; height: 80px; background-color: var(--primary-color); color: white;">
-                <i class="fas fa-book fa-2x"></i>
-              </div>
-              <h5 class="card-title fw-bold mb-3" style="color: var(--primary-color);">المحتوى التعليمي</h5>
-              <p class="card-text text-muted mb-4">مقالات ومواد تعليمية عالية الجودة تغطي مواضيع متنوعة ومحدثة باستمرار لتواكب أحدث التطورات.</p>
-              <ul class="list-unstyled text-start">
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>محتوى حصري</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>تحديث مستمر</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>مواضيع متنوعة</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Service 3 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center border-0 shadow-sm">
-            <div class="card-body p-4">
-              <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
-                   style="width: 80px; height: 80px; background-color: var(--primary-color); color: white;">
-                <i class="fas fa-users fa-2x"></i>
-              </div>
-              <h5 class="card-title fw-bold mb-3" style="color: var(--primary-color);">الدعم الفني</h5>
-              <p class="card-text text-muted mb-4">فريق دعم متخصص ومتاح على مدار الساعة لمساعدتك في حل أي مشكلة تقنية أو تعليمية قد تواجهها.</p>
-              <ul class="list-unstyled text-start">
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>دعم مستمر</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>فريق متخصص</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>استجابة سريعة</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Service 4 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center border-0 shadow-sm">
-            <div class="card-body p-4">
-              <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
-                   style="width: 80px; height: 80px; background-color: var(--primary-color); color: white;">
-                <i class="fas fa-laptop-code fa-2x"></i>
-              </div>
-              <h5 class="card-title fw-bold mb-3" style="color: var(--primary-color);">التدريب التقني</h5>
-              <p class="card-text text-muted mb-4">دورات متخصصة في البرمجة وتطوير المواقع والتطبيقات مع مشاريع عملية وتطبيق فوري للمفاهيم.</p>
-              <ul class="list-unstyled text-start">
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>مشاريع عملية</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>أحدث التقنيات</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>مدربين خبراء</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Service 5 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center border-0 shadow-sm">
-            <div class="card-body p-4">
-              <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
-                   style="width: 80px; height: 80px; background-color: var(--primary-color); color: white;">
-                <i class="fas fa-chart-line fa-2x"></i>
-              </div>
-              <h5 class="card-title fw-bold mb-3" style="color: var(--primary-color);">تطوير المهارات</h5>
-              <p class="card-text text-muted mb-4">برامج شاملة لتطوير المهارات الشخصية والمهنية مع تقييم مستمر ومتابعة فردية لكل متدرب.</p>
-              <ul class="list-unstyled text-start">
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>تقييم شخصي</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>خطط مخصصة</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>متابعة مستمرة</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Service 6 -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card service-card h-100 text-center border-0 shadow-sm">
-            <div class="card-body p-4">
-              <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
-                   style="width: 80px; height: 80px; background-color: var(--primary-color); color: white;">
-                <i class="fas fa-certificate fa-2x"></i>
-              </div>
-              <h5 class="card-title fw-bold mb-3" style="color: var(--primary-color);">الشهادات المعتمدة</h5>
-              <p class="card-text text-muted mb-4">شهادات معتمدة دولياً تعزز من فرصك المهنية وتؤكد على مستوى خبرتك ومهاراتك في المجال.</p>
-              <ul class="list-unstyled text-start">
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>اعتماد دولي</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>قيمة مهنية</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>توثيق رقمي</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+			.service-card:hover {
+				transform: translateY(-10px);
+				box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+			}
 
-  <!-- Pricing Section -->
-  <section class="py-5 bg-light">
-    <div class="container">
-      <h2 class="text-center fw-bold mb-5" style="color: var(--primary-color);">خطط الأسعار</h2>
-      
-      <div class="row g-4 justify-content-center">
-        <!-- Basic Plan -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body text-center p-4">
-              <h5 class="card-title fw-bold mb-3" style="color: var(--primary-color);">الخطة الأساسية</h5>
-              <div class="mb-4">
-                <span class="display-4 fw-bold" style="color: var(--primary-color);">مجاني</span>
-              </div>
-              <ul class="list-unstyled mb-4">
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>الوصول للمقالات المجانية</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>دعم المجتمع</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>تحديثات أسبوعية</li>
-                <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>الدورات المدفوعة</li>
-                <li class="mb-2"><i class="fas fa-times text-muted me-2"></i>الشهادات</li>
-              </ul>
-              <button class="btn btn-outline-primary w-100 rounded-pill" style="border-color: var(--primary-color); color: var(--primary-color);">
-                ابدأ مجاناً
-              </button>
-            </div>
-          </div>
-        </div>
+			.service-card:hover::before {
+				height: 100%;
+			}
 
-        <!-- Premium Plan -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card border-0 shadow-lg h-100 position-relative" style="border: 2px solid var(--primary-color) !important;">
-            <div class="position-absolute top-0 start-50 translate-middle">
-              <span class="badge rounded-pill px-3 py-2" style="background-color: var(--primary-color);">الأكثر شعبية</span>
-            </div>
-            <div class="card-body text-center p-4 pt-5">
-              <h5 class="card-title fw-bold mb-3" style="color: var(--primary-color);">الخطة المميزة</h5>
-              <div class="mb-4">
-                <span class="display-4 fw-bold" style="color: var(--primary-color);">اسعار مخفضة جداً</span>
-              </div>
-              <ul class="list-unstyled mb-4">
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>جميع المقالات والدورات</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>شهادات معتمدة</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>دعم فني مباشر</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>مشاريع عملية</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>متابعة شخصية</li>
-              </ul>
-              <button class="btn btn-primary w-100 rounded-pill" style="background-color: var(--primary-color); border-color: var(--primary-color);">
-                اشترك الآن
-              </button>
-            </div>
-          </div>
-        </div>
+			.service-icon {
+				width: 80px;
+				height: 80px;
+				background: var(--primary-color);
+				color: white;
+				border-radius: 50%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: 2rem;
+				margin: 0 auto 20px;
+				transition: all 0.3s ease;
+			}
 
-        <!-- Enterprise Plan -->
-        <div class="col-lg-4 col-md-6">
-          <div class="card border-0 shadow-sm h-100">
-            <div class="card-body text-center p-4">
-              <h5 class="card-title fw-bold mb-3" style="color: var(--primary-color);">خطة المؤسسات</h5>
-              <div class="mb-4">
-                <span class="display-4 fw-bold" style="color: var(--primary-color);">مخصص</span>
-              </div>
-              <ul class="list-unstyled mb-4">
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>حلول مخصصة</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>تدريب الفرق</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>إدارة متقدمة</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>تقارير مفصلة</li>
-                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>دعم مخصص</li>
-              </ul>
-              <button class="btn btn-outline-primary w-100 rounded-pill" style="border-color: var(--primary-color); color: var(--primary-color);">
-                تواصل معنا
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+			.service-card:hover .service-icon {
+				background: var(--secondary-color);
+				transform: rotate(10deg) scale(1.1);
+			}
 
-  <!-- Footer -->
-  <footer class="text-white py-5" style="background-color: #0f2640">
-    <div class="container">
-      <div class="row g-4">
+			.floating-whatsapp {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				z-index: 1000;
+				background: #25d366;
+				color: white;
+				border-radius: 50px;
+				padding: 10px 20px;
+				text-decoration: none;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+				transition: all 0.3s ease;
+			}
 
-        <!-- Logo & About -->
-        <div class="col-lg-4 col-md-6 text-center text-md-start">
-          <img src="material/مُعلِّمون.png" alt="Logo" height="60" class="mb-3 rounded" />
-          <p>
-            يهتم موقع معلمون بكل ما يخص العملية التعليمية فهو يوفر لكم نخبه
-            متميزة من المعلمين والمعلمات في شتى انحاء المملكة أونلاين او يجون
-            البيت من أجلكم
-          </p>
-          <p>نسعد بتواصلكم معنا والرد علي استفساراتكم</p>
-          <p>يمكنكم التواصل معنا : هدفنا انشاء جيل واعي</p>
-          <div class="d-flex justify-content-center justify-content-md-start gap-2 mt-3">
-            <a href="https://wa.me/966541737255" class="btn btn-outline-light btn-sm rounded-circle">
-              <i class="fab fa-whatsapp"></i>
-            </a>
-            <a href="https://www.instagram.com/tlymwtdrysmlmyn" class="btn btn-outline-light btn-sm rounded-circle">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
+			.floating-whatsapp:hover {
+				background: #128c7e;
+				color: white;
+				transform: translateY(-3px);
+			}
 
-        <!-- Contact Info -->
-        <div class="col-lg-4 col-md-6 text-center text-md-start">
-          <h5 class="fw-bold mb-3">معلومات الاتصال</h5>
-          <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
-            <i class="fas fa-phone text-info me-2"></i>
-            <span class="text-light">+966541737255</span>
-          </div>
-          <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
-            <i class="fas fa-envelope text-info me-2"></i>
-            <span class="text-light">support@mo3alemon.com</span>
-          </div>
-          <div class="d-flex align-items-center justify-content-center justify-content-md-start">
-            <i class="fas fa-map-marker-alt text-info me-2"></i>
-            <span class="text-light">الرياض، المملكة العربية السعودية</span>
-          </div>
-        </div>
+			.floating-instagram {
+				position: fixed;
+				bottom: 20px;
+				left: 20px;
+				z-index: 1000;
+				background: #e4405f;
+				color: white;
+				border-radius: 50%;
+				width: 60px;
+				height: 60px;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				text-decoration: none;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+				transition: all 0.3s ease;
+			}
 
-        <!-- Latest Articles -->
-        <div class="col-lg-4 col-md-12 text-center text-md-start">
-          <h5 class="fw-bold mb-3">أحدث المقالات</h5>
-          <div class="article mb-2">
-            <p class="mb-1">
-              <a href="Articles/html/index10.html" class="text-light text-decoration">
-                فوائد المعلم الخصوصي في المنزل
-              </a>
-            </p>
-          </div>
-          <div class="article">
-            <p class="mb-0">
-              <a href="Articles/html/index4.html" class="text-light text-decoration">
-                الفارق بين التعليم الأهلي والتعليم العالمي في السعودية
-              </a>
-            </p>
-          </div>
-        </div>
+			.floating-instagram:hover {
+				background: #c13584;
+				color: white;
+				transform: scale(1.1);
+			}
 
-      </div>
+			.footer {
+				background: #0f2640;
+				color: #f0f0f0;
+			}
 
-      <hr class="my-4 border-secondary" />
-      <div class="text-center">
-        <p class="mb-0 text-light">
-          &copy; 2025 الموقع التعليمي. جميع الحقوق محفوظة.
-        </p>
-      </div>
-    </div>
-  </footer>
+			.footer h5 {
+				color: white;
+				position: relative;
+				padding-bottom: 10px;
+			}
 
-  <!-- Floating Icons -->
-  <div class="floating-icons right">
-    <a href="https://wa.me/966541737255" target="_blank" title="واتساب">
-      <img src="whatsapp.png" alt="WhatsApp">
-    </a>
-    <a href="https://www.instagram.com/tlymwtdrysmlmyn" target="_blank" title="إنستغرام">
-      <img src="instagram.png" alt="Instagram">
-    </a>
-  </div>
+			.footer h5::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				width: 50px;
+				height: 2px;
+				background: var(--primary-color);
+			}
 
-  <!-- Back to Top Button -->
-  <button class="btn btn-primary rounded-circle position-fixed" id="backToTop" style="
-        bottom: 20px;
-        left: 20px;
-        width: 50px;
-        height: 50px;
-        display: none;
-        z-index: 1050;
-        background-color: #00aeef;
-        border-color: #00aeef;
-      ">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+			.footer a {
+				color: #f0f0f0;
+				text-decoration: none;
+				transition: color 0.3s ease;
+			}
 
-  
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+			.footer a:hover {
+				color: var(--primary-color);
+			}
 
-  <!-- Custom JS -->
-  <script src="JS/main.js"></script>
-  
-  <script>
-    // Animate elements on scroll
-    const animateElements = document.querySelectorAll('.animate__animated');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = 1;
-          entry.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
+			.social-icons a {
+				width: 40px;
+				height: 40px;
+				background: rgba(255, 255, 255, 0.1);
+				border-radius: 50%;
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				margin-left: 10px;
+				transition: background 0.3s ease;
+			}
 
-    animateElements.forEach((el) => {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
-      observer.observe(el);
-    });
-  </script>
-</body>
+			.social-icons a:hover {
+				background: var(--primary-color);
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Header -->
+		<nav
+			class="navbar navbar-expand-lg sticky-top shadow-sm"
+			style="background-color: var(--primary-color)">
+			<div class="container">
+				<a
+					class="navbar-brand text-white fw-bold fs-4"
+					href="index.html">
+					<img
+						src="logo.png"
+						alt="Logo"
+						height="50"
+						class="me-2" />
+				</a>
+
+				<button
+					class="navbar-toggler"
+					type="button"
+					data-bs-toggle="collapse"
+					data-bs-target="#navbarNav">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+
+				<div
+					class="collapse navbar-collapse"
+					id="navbarNav">
+					<ul class="navbar-nav ms-auto">
+						<li class="nav-item">
+							<a
+								class="nav-link text-white fw-bold px-3"
+								href="index.html">
+								الرئيسية
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white fw-bold px-3"
+								href="blog.html">
+								المقالات
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white fw-bold px-3 active"
+								href="service.html"
+								aria-current="page">
+								الخدمات
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white fw-bold px-3"
+								href="about.html">
+								من نحن
+							</a>
+						</li>
+						<li class="nav-item">
+							<a
+								class="nav-link text-white fw-bold px-3"
+								href="contact_us.html">
+								اتصل بنا
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Hero Section -->
+		<section class="hero-gradient text-white py-5">
+			<div class="container text-center">
+				<h1 class="display-4 fw-bold mb-4">خدماتنا</h1>
+				<p class="lead">نقدم مجموعة شاملة من الخدمات التعليمية المتميزة</p>
+			</div>
+		</section>
+
+		<!-- Services Section -->
+		<section class="py-5">
+			<div class="container">
+				<div class="row g-4">
+					<!-- Service 1 -->
+					<div class="col-lg-4 col-md-6">
+						<div class="card service-card h-100 text-center border-0 shadow-sm">
+							<div class="card-body p-4">
+								<div
+									class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+									style="
+										width: 80px;
+										height: 80px;
+										background-color: var(--primary-color);
+										color: white;
+									">
+									<i class="fas fa-graduation-cap fa-2x"></i>
+								</div>
+								<h5
+									class="card-title fw-bold mb-3"
+									style="color: var(--primary-color)">
+									التعليم الإلكتروني
+								</h5>
+								<p class="card-text text-muted mb-4">
+									دورات تعليمية شاملة في مختلف المجالات مع شهادات معتمدة وتفاعل
+									مباشر مع المدربين المتخصصين.
+								</p>
+								<ul class="list-unstyled text-start">
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										دورات متنوعة
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										شهادات معتمدة
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										دعم فني 24/7
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Service 2 -->
+					<div class="col-lg-4 col-md-6">
+						<div class="card service-card h-100 text-center border-0 shadow-sm">
+							<div class="card-body p-4">
+								<div
+									class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+									style="
+										width: 80px;
+										height: 80px;
+										background-color: var(--primary-color);
+										color: white;
+									">
+									<i class="fas fa-book fa-2x"></i>
+								</div>
+								<h5
+									class="card-title fw-bold mb-3"
+									style="color: var(--primary-color)">
+									المحتوى التعليمي
+								</h5>
+								<p class="card-text text-muted mb-4">
+									مقالات ومواد تعليمية عالية الجودة تغطي مواضيع متنوعة ومحدثة
+									باستمرار لتواكب أحدث التطورات.
+								</p>
+								<ul class="list-unstyled text-start">
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										محتوى حصري
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										تحديث مستمر
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										مواضيع متنوعة
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Service 3 -->
+					<div class="col-lg-4 col-md-6">
+						<div class="card service-card h-100 text-center border-0 shadow-sm">
+							<div class="card-body p-4">
+								<div
+									class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+									style="
+										width: 80px;
+										height: 80px;
+										background-color: var(--primary-color);
+										color: white;
+									">
+									<i class="fas fa-users fa-2x"></i>
+								</div>
+								<h5
+									class="card-title fw-bold mb-3"
+									style="color: var(--primary-color)">
+									الدعم الفني
+								</h5>
+								<p class="card-text text-muted mb-4">
+									فريق دعم متخصص ومتاح على مدار الساعة لمساعدتك في حل أي مشكلة
+									تقنية أو تعليمية قد تواجهها.
+								</p>
+								<ul class="list-unstyled text-start">
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										دعم مستمر
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										فريق متخصص
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										استجابة سريعة
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Service 4 -->
+					<div class="col-lg-4 col-md-6">
+						<div class="card service-card h-100 text-center border-0 shadow-sm">
+							<div class="card-body p-4">
+								<div
+									class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+									style="
+										width: 80px;
+										height: 80px;
+										background-color: var(--primary-color);
+										color: white;
+									">
+									<i class="fas fa-laptop-code fa-2x"></i>
+								</div>
+								<h5
+									class="card-title fw-bold mb-3"
+									style="color: var(--primary-color)">
+									التدريب التقني
+								</h5>
+								<p class="card-text text-muted mb-4">
+									دورات متخصصة في البرمجة وتطوير المواقع والتطبيقات مع مشاريع
+									عملية وتطبيق فوري للمفاهيم.
+								</p>
+								<ul class="list-unstyled text-start">
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										مشاريع عملية
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										أحدث التقنيات
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										مدربين خبراء
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Service 5 -->
+					<div class="col-lg-4 col-md-6">
+						<div class="card service-card h-100 text-center border-0 shadow-sm">
+							<div class="card-body p-4">
+								<div
+									class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+									style="
+										width: 80px;
+										height: 80px;
+										background-color: var(--primary-color);
+										color: white;
+									">
+									<i class="fas fa-chart-line fa-2x"></i>
+								</div>
+								<h5
+									class="card-title fw-bold mb-3"
+									style="color: var(--primary-color)">
+									تطوير المهارات
+								</h5>
+								<p class="card-text text-muted mb-4">
+									برامج شاملة لتطوير المهارات الشخصية والمهنية مع تقييم مستمر
+									ومتابعة فردية لكل متدرب.
+								</p>
+								<ul class="list-unstyled text-start">
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										تقييم شخصي
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										خطط مخصصة
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										متابعة مستمرة
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+
+					<!-- Service 6 -->
+					<div class="col-lg-4 col-md-6">
+						<div class="card service-card h-100 text-center border-0 shadow-sm">
+							<div class="card-body p-4">
+								<div
+									class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3"
+									style="
+										width: 80px;
+										height: 80px;
+										background-color: var(--primary-color);
+										color: white;
+									">
+									<i class="fas fa-certificate fa-2x"></i>
+								</div>
+								<h5
+									class="card-title fw-bold mb-3"
+									style="color: var(--primary-color)">
+									الشهادات المعتمدة
+								</h5>
+								<p class="card-text text-muted mb-4">
+									شهادات معتمدة دولياً تعزز من فرصك المهنية وتؤكد على مستوى
+									خبرتك ومهاراتك في المجال.
+								</p>
+								<ul class="list-unstyled text-start">
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										اعتماد دولي
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										قيمة مهنية
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										توثيق رقمي
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Pricing Section -->
+		<section class="py-5 bg-light">
+			<div class="container">
+				<h2
+					class="text-center fw-bold mb-5"
+					style="color: var(--primary-color)">
+					خطط الأسعار
+				</h2>
+
+				<div class="row g-4 justify-content-center">
+					<!-- Basic Plan -->
+					<div class="col-lg-4 col-md-6">
+						<div class="card border-0 shadow-sm h-100">
+							<div class="card-body text-center p-4">
+								<h5
+									class="card-title fw-bold mb-3"
+									style="color: var(--primary-color)">
+									الخطة الأساسية
+								</h5>
+								<div class="mb-4">
+									<span
+										class="display-4 fw-bold"
+										style="color: var(--primary-color)">
+										مجاني
+									</span>
+								</div>
+								<ul class="list-unstyled mb-4">
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										الوصول للمقالات المجانية
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										دعم المجتمع
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										تحديثات أسبوعية
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-times text-muted me-2"></i>
+										الدورات المدفوعة
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-times text-muted me-2"></i>
+										الشهادات
+									</li>
+								</ul>
+								<a
+									href="https://wa.me/966541737255"
+									target="_blank"
+									class="btn w-100 rounded-pill"
+									style="
+										border-color: var(--primary-color);
+										color: var(--primary-color);
+										text-align: center;
+										display: inline-block;
+										padding: 0.375rem 0.75rem;
+										text-decoration: none;
+									">
+									ابدأ مجاناً
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Premium Plan -->
+					<div class="col-lg-4 col-md-6">
+						<div
+							class="card border-0 shadow-lg h-100 position-relative"
+							style="border: 2px solid var(--primary-color) !important">
+							<div class="position-absolute top-0 start-50 translate-middle">
+								<span
+									class="badge rounded-pill px-3 py-2"
+									style="background-color: var(--primary-color)">
+									الأكثر شعبية
+								</span>
+							</div>
+							<div class="card-body text-center p-4 pt-5">
+								<h5
+									class="card-title fw-bold mb-3"
+									style="color: var(--primary-color)">
+									الخطة المميزة
+								</h5>
+								<div class="mb-4">
+									<span
+										class="display-4 fw-bold"
+										style="color: var(--primary-color)">
+										اسعار مخفضة جداً
+									</span>
+								</div>
+								<ul class="list-unstyled mb-4">
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										جميع المقالات والدورات
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										شهادات معتمدة
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										دعم فني مباشر
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										مشاريع عملية
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										متابعة شخصية
+									</li>
+								</ul>
+								<a
+									href="https://wa.me/966541737255"
+									target="_blank"
+									class="btn w-100 rounded-pill"
+									style="
+										background-color: var(--primary-color);
+										border-color: var(--primary-color);
+										text-align: center;
+										display: inline-block;
+										padding: 0.375rem 0.75rem;
+										text-decoration: none;
+										color: white;
+									">
+									اشترك الان
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Enterprise Plan -->
+					<div class="col-lg-4 col-md-6">
+						<div class="card border-0 shadow-sm h-100">
+							<div class="card-body text-center p-4">
+								<h5
+									class="card-title fw-bold mb-3"
+									style="color: var(--primary-color)">
+									خطة المؤسسات
+								</h5>
+								<div class="mb-4">
+									<span
+										class="display-4 fw-bold"
+										style="color: var(--primary-color)">
+										مخصص
+									</span>
+								</div>
+								<ul class="list-unstyled mb-4">
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										حلول مخصصة
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										تدريب الفرق
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										إدارة متقدمة
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										تقارير مفصلة
+									</li>
+									<li class="mb-2">
+										<i class="fas fa-check text-success me-2"></i>
+										دعم مخصص
+									</li>
+								</ul>
+								<a
+									href="https://wa.me/966541737255"
+									target="_blank"
+									class="btn  w-100 rounded-pill"
+									style="
+										border-color: var(--primary-color);
+										color: var(--primary-color);
+										text-align: center;
+										display: inline-block;
+										padding: 0.375rem 0.75rem;
+										text-decoration: none;
+									">
+									تواصل معنا
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Footer -->
+		<footer
+			class="text-white py-5"
+			style="background-color: #0f2640">
+			<div class="container">
+				<div class="row g-4">
+					<!-- Logo & About -->
+					<div class="col-lg-4 col-md-6 text-center text-md-start">
+						<img
+							src="material/مُعلِّمون.png"
+							alt="Logo"
+							height="60"
+							class="mb-3 rounded" />
+						<p>
+							يهتم موقع معلمون بكل ما يخص العملية التعليمية فهو يوفر لكم نخبه
+							متميزة من المعلمين والمعلمات في شتى انحاء المملكة أونلاين او يجون
+							البيت من أجلكم
+						</p>
+						<p>نسعد بتواصلكم معنا والرد علي استفساراتكم</p>
+						<p>يمكنكم التواصل معنا : هدفنا انشاء جيل واعي</p>
+						<div
+							class="d-flex justify-content-center justify-content-md-start gap-2 mt-3">
+							<a
+								href="https://wa.me/966541737255"
+								class="btn btn-outline-light btn-sm rounded-circle">
+								<i class="fab fa-whatsapp"></i>
+							</a>
+							<a
+								href="https://www.instagram.com/tlymwtdrysmlmyn"
+								class="btn btn-outline-light btn-sm rounded-circle">
+								<i class="fab fa-instagram"></i>
+							</a>
+						</div>
+					</div>
+
+					<!-- Contact Info -->
+					<div class="col-lg-4 col-md-6 text-center text-md-start">
+						<h5 class="fw-bold mb-3">معلومات الاتصال</h5>
+						<div
+							class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+							<i class="fas fa-phone text-info me-2"></i>
+							<span class="text-light">+966541737255</span>
+						</div>
+						<div
+							class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+							<i class="fas fa-envelope text-info me-2"></i>
+							<span class="text-light">support@mo3alemon.com</span>
+						</div>
+						<div
+							class="d-flex align-items-center justify-content-center justify-content-md-start">
+							<i class="fas fa-map-marker-alt text-info me-2"></i>
+							<span class="text-light">الرياض، المملكة العربية السعودية</span>
+						</div>
+					</div>
+
+					<!-- Latest Articles -->
+					<div class="col-lg-4 col-md-12 text-center text-md-start">
+						<h5 class="fw-bold mb-3">أحدث المقالات</h5>
+						<div class="article mb-2">
+							<p class="mb-1">
+								<a
+									href="Articles/html/index10.html"
+									class="text-light text-decoration">
+									فوائد المعلم الخصوصي في المنزل
+								</a>
+							</p>
+						</div>
+						<div class="article">
+							<p class="mb-0">
+								<a
+									href="Articles/html/index4.html"
+									class="text-light text-decoration">
+									الفارق بين التعليم الأهلي والتعليم العالمي في السعودية
+								</a>
+							</p>
+						</div>
+					</div>
+				</div>
+
+				<hr class="my-4 border-secondary" />
+				<div class="text-center">
+					<p class="mb-0 text-light">
+						&copy; 2025 الموقع التعليمي. جميع الحقوق محفوظة.
+					</p>
+				</div>
+			</div>
+		</footer>
+
+		<!-- Floating Icons -->
+		<div class="floating-icons right">
+			<a
+				href="https://wa.me/966541737255"
+				target="_blank"
+				title="واتساب">
+				<img
+					src="whatsapp.png"
+					alt="WhatsApp" />
+			</a>
+			<a
+				href="https://www.instagram.com/tlymwtdrysmlmyn"
+				target="_blank"
+				title="إنستغرام">
+				<img
+					src="instagram.png"
+					alt="Instagram" />
+			</a>
+		</div>
+
+		<!-- Back to Top Button -->
+		<button
+			class="btn btn-primary rounded-circle position-fixed"
+			id="backToTop"
+			style="
+				bottom: 20px;
+				left: 20px;
+				width: 50px;
+				height: 50px;
+				display: none;
+				z-index: 1050;
+				background-color: #00aeef;
+				border-color: #00aeef;
+			">
+			<i class="fas fa-arrow-up"></i>
+		</button>
+
+		<!-- Bootstrap JS -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+		<!-- Custom JS -->
+		<script src="JS/main.js"></script>
+
+		<script>
+			// Animate elements on scroll
+			const animateElements = document.querySelectorAll(".animate__animated");
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry) => {
+						if (entry.isIntersecting) {
+							entry.target.style.opacity = 1;
+							entry.target.style.transform = "translateY(0)";
+						}
+					});
+				},
+				{ threshold: 0.1 }
+			);
+
+			animateElements.forEach((el) => {
+				el.style.opacity = 0;
+				el.style.transform = "translateY(20px)";
+				el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+				observer.observe(el);
+			});
+		</script>
+	</body>
 </html>
