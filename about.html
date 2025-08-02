@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="خدمات توفير معلمين خصوصيين متخصصين في جميع المواد التعليمية بمستوى عالي من الجودة" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>من نحن - الموقع التعليمي</title>
+
+  <!-- Bootstrap RTL CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <!-- Animate CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+  <style>
+    :root {
+      --primary-color: #00aeef;
+      --secondary-color: #0077a3;
+    }
+    
+    body {
+      font-family: 'Tajawal', sans-serif;
+    }
+    
+    
+    .hero-gradient {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      padding: 100px 0;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero-gradient::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z' fill='%23ffffff' opacity='.25'%3E%3C/path%3E%3C/svg%3E") repeat-x;
+      background-size: 1200px 100px;
+    }
+    
+    .feature-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 4px;
+      height: 0;
+      background: var(--primary-color);
+      transition: height 0.3s ease;
+    }
+    
+    .feature-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .feature-card:hover::before {
+      height: 100%;
+    }
+    
+    .feature-card h4 {
+      color: var(--primary-color);
+      position: relative;
+      padding-right: 25px;
+    }
+    
+    .feature-card h4::before {
+      content: "•";
+      position: absolute;
+      right: 0;
+      color: var(--secondary-color);
+      font-size: 1.5rem;
+    }
+    
+    .benefits-section {
+      background: #f8f9fa;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .benefits-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--primary-color);
+    }
+    
+    .benefit-item {
+      position: relative;
+      padding-right: 40px;
+      margin-bottom: 20px;
+    }
+    
+    .benefit-item::before {
+      content: "✓";
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: var(--secondary-color);
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    
+    .contact-cta {
+      background: var(--primary-color);
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .contact-cta::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--secondary-color);
+    }
+    
+    .btn-cta {
+      background: var(--secondary-color);
+      border: 2px solid transparent;
+      color: white;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+    
+    .btn-cta:hover {
+      background: transparent;
+      border-color: white;
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    
+    .footer {
+      background: #0f2640;
+      color: #f0f0f0;
+    }
+    
+    .footer h5 {
+      color: white;
+      position: relative;
+      padding-bottom: 10px;
+    }
+    
+    .footer h5::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50px;
+      height: 2px;
+      background: var(--primary-color);
+    }
+    
+    .footer a {
+      color: #f0f0f0;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    
+    .footer a:hover {
+      color: var(--primary-color);
+    }
+    
+    .social-icons a {
+      width: 40px;
+      height: 40px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 10px;
+      transition: background 0.3s ease;
+    }
+    
+    .social-icons a:hover {
+      background: var(--primary-color);
+    }
+    
+  
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg sticky-top shadow-sm" style="background-color: #00aeef;">
+    <div class="container">
+      <a class="navbar-brand text-white fw-bold fs-4" href="index.html">
+        <img src="logo.png" alt="Logo" height="50" class="me-2">
+      </a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link text-white fw-bold px-3" href="index.html">الرئيسية</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-bold px-3" href="blog.html">المقالات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-bold px-3" href="service.html">الخدمات</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-bold px-3 active" href="about.html">من نحن</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white fw-bold px-3" href="contact_us.html">اتصل بنا</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-gradient text-white py-5">
+    <div class="container text-center">
+      <h1 class="display-4 fw-bold mb-4">من نحن</h1>
+      <p class="lead text-white">تعرف على قصتنا ورؤيتنا في تقديم أفضل محتوى تعليمي</p>
+    </div>
+  </section>
+
+  <!-- About Content -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <img src="مُعلِّمون.png" alt="فريق العمل" class="img-fluid rounded shadow">
+        </div>
+        <div class="col-lg-6">
+          <h2 class="fw-bold mb-4" style="color: #00aeef;">رؤيتنا ورسالتنا</h2>
+          <p class="lead text-muted mb-4">نحن فريق متخصص في التعليم الإلكتروني، نسعى لتقديم محتوى تعليمي عالي الجودة يساعد الطلاب والمتعلمين على تحقيق أهدافهم التعليمية والمهنية.</p>
+          
+          <div class="row g-4">
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center">
+                <div class="rounded-circle d-flex align-items-center justify-content-center me-3" 
+                     style="width: 50px; height: 50px; background-color: #00aeef; color: white;">
+                  <i class="fas fa-eye"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">رؤيتنا</h6>
+                  <small class="text-muted">أن نكون المنصة الرائدة في التعليم الرقمي</small>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-sm-6">
+              <div class="d-flex align-items-center">
+                <div class="rounded-circle d-flex align-items-center justify-content-center me-3" 
+                     style="width: 50px; height: 50px; background-color: #00aeef; color: white;">
+                  <i class="fas fa-bullseye"></i>
+                </div>
+                <div>
+                  <h6 class="fw-bold mb-1">رسالتنا</h6>
+                  <small class="text-muted">تقديم تعليم متميز ومتاح للجميع</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Statistics -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row g-4 text-center">
+        <div class="col-lg-3 col-md-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                   style="width: 70px; height: 70px; background-color: #00aeef; color: white;">
+                <i class="fas fa-users fa-2x"></i>
+              </div>
+              <h3 class="fw-bold" style="color: #00aeef;">10,000+</h3>
+              <p class="text-muted mb-0">طالب مسجل</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                   style="width: 70px; height: 70px; background-color: #00aeef; color: white;">
+                <i class="fas fa-book fa-2x"></i>
+              </div>
+              <h3 class="fw-bold" style="color: #00aeef;">500+</h3>
+              <p class="text-muted mb-0">مقال تعليمي</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                   style="width: 70px; height: 70px; background-color: #00aeef; color: white;">
+                <i class="fas fa-graduation-cap fa-2x"></i>
+              </div>
+              <h3 class="fw-bold" style="color: #00aeef;">50+</h3>
+              <p class="text-muted mb-0">دورة تدريبية</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="card border-0 shadow-sm h-100">
+            <div class="card-body p-4">
+              <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                   style="width: 70px; height: 70px; background-color: #00aeef; color: white;">
+                <i class="fas fa-award fa-2x"></i>
+              </div>
+              <h3 class="fw-bold" style="color: #00aeef;">5</h3>
+              <p class="text-muted mb-0">سنوات خبرة</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center fw-bold mb-5" style="color: #00aeef;">قيمنا</h2>
+      
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="text-center">
+            <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                 style="width: 80px; height: 80px; background-color: #00aeef; color: white;">
+              <i class="fas fa-lightbulb fa-2x"></i>
+            </div>
+            <h5 class="fw-bold mb-3" style="color: #00aeef;">الإبداع</h5>
+            <p class="text-muted">نسعى دائماً لتقديم محتوى مبتكر وطرق تعليمية حديثة</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="text-center">
+            <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                 style="width: 80px; height: 80px; background-color: #00aeef; color: white;">
+              <i class="fas fa-heart fa-2x"></i>
+            </div>
+            <h5 class="fw-bold mb-3" style="color: #00aeef;">الشغف</h5>
+            <p class="text-muted">نحب ما نقوم به ونؤمن بأهمية التعليم في تغيير الحياة</p>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6">
+          <div class="text-center">
+            <div class="rounded-circle d-inline-flex align-items-center justify-content-center mb-3" 
+                 style="width: 80px; height: 80px; background-color: #00aeef; color: white;">
+              <i class="fas fa-handshake fa-2x"></i>
+            </div>
+            <h5 class="fw-bold mb-3" style="color: #00aeef;">الثقة</h5>
+            <p class="text-muted">نبني علاقات قوية مع طلابنا قائمة على الثقة والاحترام</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="display-5 fw-bold text-primary animate__animated animate__fadeInUp">لماذا نتميز؟</h2>
+          <div class="mx-auto mt-3" style="width: 80px; height: 4px; background: var(--primary-color);"></div>
+        </div>
+      </div>
+      
+      <div class="row g-4">
+        <div class="col-lg-6 col-md-6">
+          <div class="feature-card animate__animated animate__fadeInUp animate__delay-1s">
+            <h4 class="fw-bold mb-3">معلمون خبراء</h4>
+            <p>
+              فريق من المعلمين المؤهلين في تخصصات دقيقة، يقدمون شرحًا مبسطًا وشاملًا 
+              مع سنوات من الخبرة في المجال التعليمي.
+            </p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6">
+          <div class="feature-card animate__animated animate__fadeInUp animate__delay-1s">
+            <h4 class="fw-bold mb-3">خطط دراسية مخصصة</h4>
+            <p>
+              نصنع خطة تعليمية تناسب مستوى كل طالب وأهدافه بناءً على تقييم دقيق 
+              لمهاراته واحتياجاته.
+            </p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6">
+          <div class="feature-card animate__animated animate__fadeInUp animate__delay-2s">
+            <h4 class="fw-bold mb-3">مرونة زمنية</h4>
+            <p>
+              اختيار أوقات الدروس بما يتناسب مع جدول الطالب مع إمكانية تعديل 
+              المواعيد حسب الحاجة.
+            </p>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 col-md-6">
+          <div class="feature-card animate__animated animate__fadeInUp animate__delay-2s">
+            <h4 class="fw-bold mb-3">متابعة وتقييم</h4>
+            <p>
+              تقارير دورية وتغذية راجعة لقياس التقدم وتحسين الأداء مع نصائح 
+              مخصصة للتحسين.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Subjects Table Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="display-5 fw-bold text-primary">مجالاتنا التعليمية</h2>
+          <div class="mx-auto mt-3" style="width: 80px; height: 4px; background: var(--primary-color);"></div>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <div class="table-responsive bg-white rounded shadow">
+            <table class="table table-hover mb-0">
+              <thead class="table-primary">
+                <tr>
+                  <th class="text-center fw-bold py-3">التخصص</th>
+                  <th class="text-center fw-bold py-3">يشمل</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="text-center fw-bold text-primary py-3">الرياضيات</td>
+                  <td class="py-3">الجبر، الهندسة، التفاضل والتكامل، الإحصاء، الرياضيات المتقدمة</td>
+                </tr>
+                <tr>
+                  <td class="text-center fw-bold text-primary py-3">العلوم</td>
+                  <td class="py-3">فيزياء، كيمياء، أحياء، علوم عامة، تطبيقات علمية</td>
+                </tr>
+                <tr>
+                  <td class="text-center fw-bold text-primary py-3">اللغة الإنجليزية</td>
+                  <td class="py-3">قراءة، كتابة، محادثة، تحضير لاختبارات دولية (IELTS, TOEFL)</td>
+                </tr>
+                <tr>
+                  <td class="text-center fw-bold text-primary py-3">القدرات والتحصيلي</td>
+                  <td class="py-3">تأهيل شامل لاختبارات القبول الجامعية، تدريبات مكثفة، نماذج اختبارات</td>
+                </tr>
+                <tr>
+                  <td class="text-center fw-bold text-primary py-3">مواد أخرى</td>
+                  <td class="py-3">حسب احتياج الطالب (تاريخ، جغرافيا، لغات، برمجة، إلخ)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits-section py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center mb-5">
+          <h2 class="display-5 fw-bold text-primary">فوائد التعليم معنا</h2>
+          <div class="mx-auto mt-3" style="width: 80px; height: 4px; background: var(--primary-color);"></div>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="benefit-item">
+            <h5 class="fw-bold">تحصيل علمي أسرع</h5>
+            <p>بفضل شرح مخصص يركز على نقاط الضعف مع استخدام استراتيجيات تعليمية فعالة</p>
+          </div>
+          
+          <div class="benefit-item">
+            <h5 class="fw-bold">تعزيز الثقة بالنفس</h5>
+            <p>عبر حل المشكلات التعليمية بشكل منهجي وبناء المهارات الأساسية</p>
+          </div>
+          
+          <div class="benefit-item">
+            <h5 class="fw-bold">تحقيق أعلى الدرجات</h5>
+            <p>في الاختبارات المدرسية أو الوطنية مع تدريبات مستمرة على نماذج الاختبارات</p>
+          </div>
+          
+          <div class="benefit-item">
+            <h5 class="fw-bold">تعلم مهارات التنظيم والاستذكار</h5>
+            <p>لبناء عادات دراسية ناجحة تدوم مدى الحياة</p>
+          </div>
+          
+          <div class="benefit-item">
+            <h5 class="fw-bold">دعم أكاديمي متكامل</h5>
+            <p>يشمل التوجيه الدراسي واختيار التخصصات المناسبة</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA Section -->
+  <section class="contact-cta py-5 text-center">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <h2 class="display-5 fw-bold mb-4">تواصل معنا اليوم!</h2>
+          <div class="mb-4">
+            <p class="lead mb-3"><strong>هل ترغب في دعم تعليمي فعّال لابنك أو ابنتك؟</strong></p>
+            <p class="lead mb-4"><strong>لا تتردد في التواصل مع فريقنا المتخصص!</strong></p>
+          </div>
+          
+          <div class="row justify-content-center mb-4">
+            <div class="col-md-4 mb-3">
+              <p class="mb-1">
+                <i class="fas fa-phone me-2"></i>
+                <strong>الهاتف:</strong>
+              </p>
+              <p>+966541737255</p>
+            </div>
+            <div class="col-md-4 mb-3">
+              <p class="mb-1">
+                <i class="fas fa-envelope me-2"></i>
+                <strong>البريد الإلكتروني:</strong>
+              </p>
+              <p>support@mo3alemon.com</p>
+            </div>
+          </div>
+          
+          <a href="https://wa.me/966541737255" target="_blank" class="btn-cta">
+            احجز معلمك الآن
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+ <!-- Footer -->
+  <footer class="text-white py-5" style="background-color: #0f2640">
+    <div class="container">
+      <div class="row g-4">
+
+        <!-- Logo & About -->
+        <div class="col-lg-4 col-md-6 text-center text-md-start">
+          <img src="material/مُعلِّمون.png" alt="Logo" height="60" class="mb-3 rounded" />
+          <p>
+            يهتم موقع معلمون بكل ما يخص العملية التعليمية فهو يوفر لكم نخبه
+            متميزة من المعلمين والمعلمات في شتى انحاء المملكة أونلاين او يجون
+            البيت من أجلكم
+          </p>
+          <p>نسعد بتواصلكم معنا والرد علي استفساراتكم</p>
+          <p>يمكنكم التواصل معنا : هدفنا انشاء جيل واعي</p>
+          <div class="d-flex justify-content-center justify-content-md-start gap-2 mt-3">
+            <a href="https://wa.me/966541737255" class="btn btn-outline-light btn-sm rounded-circle">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/tlymwtdrysmlmyn" class="btn btn-outline-light btn-sm rounded-circle">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="col-lg-4 col-md-6 text-center text-md-start">
+          <h5 class="fw-bold mb-3">معلومات الاتصال</h5>
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+            <i class="fas fa-phone text-info me-2"></i>
+            <span class="text-light">+966541737255</span>
+          </div>
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start mb-2">
+            <i class="fas fa-envelope text-info me-2"></i>
+            <span class="text-light">support@mo3alemon.com</span>
+          </div>
+          <div class="d-flex align-items-center justify-content-center justify-content-md-start">
+            <i class="fas fa-map-marker-alt text-info me-2"></i>
+            <span class="text-light">الرياض، المملكة العربية السعودية</span>
+          </div>
+        </div>
+
+        <!-- Latest Articles -->
+        <div class="col-lg-4 col-md-12 text-center text-md-start">
+          <h5 class="fw-bold mb-3">أحدث المقالات</h5>
+          <div class="article mb-2">
+            <p class="mb-1">
+              <a href="Articles/html/index10.html" class="text-light text-decoration">
+                فوائد المعلم الخصوصي في المنزل
+              </a>
+            </p>
+          </div>
+          <div class="article">
+            <p class="mb-0">
+              <a href="Articles/html/index4.html" class="text-light text-decoration">
+                الفارق بين التعليم الأهلي والتعليم العالمي في السعودية
+              </a>
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="my-4 border-secondary" />
+      <div class="text-center">
+        <p class="mb-0 text-light">
+          &copy; 2025 الموقع التعليمي. جميع الحقوق محفوظة.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Icons -->
+ <div class="floating-icons right">
+    <a href="https://wa.me/966541737255" target="_blank" title="واتساب">
+      <img src="whatsapp.png" alt="WhatsApp">
+    </a>
+    <a href="https://www.instagram.com/tlymwtdrysmlmyn" target="_blank" title="إنستغرام">
+      <img src="instagram.png" alt="Instagram">
+    </a>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button class="btn btn-primary rounded-circle position-fixed" id="backToTop" style="
+        bottom: 20px;
+        left: 20px;
+        width: 50px;
+        height: 50px;
+        display: none;
+        z-index: 1050;
+        background-color: #00aeef;
+        border-color: #00aeef;
+      ">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="JS/main.js"></script>
+  
+  <script>
+    // Animate elements on scroll
+    const animateElements = document.querySelectorAll('.animate__animated');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.1 });
+
+    animateElements.forEach((el) => {
+      el.style.opacity = 0;
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
