@@ -3,7 +3,9 @@ const articles = [
 		id: 1,
 		title: "أفضل معلم خصوصي في الرياض مع تقييمات حقيقية",
 		excerpt: "اكتشف أفضل معلم خصوصي في الرياض من خلال تقييمات حقيقية ومراجعات موثوقة. دليل شامل لاختيار المعلم المناسب لتحقيق أفضل النتائج الأكاديمية.",
-		image: "material/1.jpg",
+    image: "material/1.jpg",
+    paragraph: "في هذا المقال، نستعرض أفضل المعلمين الخصوصيين في الرياض بناءً على تقييمات حقيقية من أولياء الأمور والطلاب. تعرف على كيفية اختيار المعلم المناسب لمساعدتك في تحقيق أهدافك الأكاديمية.",
+
 		link: "Articles/html/best-private-tutor-riyadh.html",
 	},
 	{
@@ -55,7 +57,6 @@ const articles = [
 		image: "material/14.jpg",
 		link: "Articles/html/online-private-lessons-effectiveness.html",
 	},
-	/// not css 
 	{
 		id: 11,
 		title: "مدرس خصوصي Online – المزايا والتحديات",
@@ -102,22 +103,32 @@ const articles = [
 		id: 17,
 		title: "الفرق بين القدرات والتحصيلي وكيفية الاستعداد لكل منهما",
 		excerpt: "تعرف على الفرق بين اختبار القدرات واختبار التحصيلي في السعودية، مع دليل شامل حول كيفية الاستعداد لكل منهما لتحقيق أفضل النتائج في القبول الجامعي.",
+<<<<<<< HEAD
 		image: "material/20.png",
 		link: "Articles/html/difference-between-qiyas-and-achievement-tests-and-how-to-prepare.html",
+=======
+		image: "material/21.png",
+		link: "Articles/html/الفرق بين القدرات والتحصيلي وكيفية الاستعداد لكل منهما.html",
+>>>>>>> 57489bb8bf21d3f15abddcebfe64fbd4f2be4934
 	},
 	{
 		id: 18,
 		title: "دليل شامل لـ Tutor قدرات – خيارات ومراجعات | معلمون",
 		excerpt: "اكتشف أفضل tutor قدرات في السعودية. دليل شامل لاختيار مدرس القدرات المناسب مع مراجعات وتقييمات حقيقية.",
-		image: "material/21.png",
+		image: "material/6.jpg",
 		link: "Articles/html/tutor-capacity-comprehensive-guide.html",
 	},
 	{
 		id: 19,
 		title: "كيف تختار أفضل مدرس خصوصي لجميع المراحل؟ | معلمون",
 		excerpt: "اكتشف أهم المعايير التي يجب مراعاتها عند اختيار مدرس خصوصي لجميع المراحل الدراسية، وكيفية التمييز بين المدرسين المؤهلين والطرق الذكية لتقييم الأداء وتحقيق نتائج فعالة.",
+<<<<<<< HEAD
 		image: "material/22.png",
 		link: "Articles/html/how-to-choose-best-private-tutor-for-all-levels.html",
+=======
+		image: "material/5.jpg",
+		link: "Articles/html/كيف تختار أفضل مدرس خصوصي لجميع المراحل.html",
+>>>>>>> 57489bb8bf21d3f15abddcebfe64fbd4f2be4934
 	},
 	{
 		id: 20,
