@@ -107,8 +107,7 @@ const articles = [
 		image: "material/20.png",
 		link: "Articles/html/difference-between-qiyas-and-achievement-tests-and-how-to-prepare.html",
 
-		image: "material/21.png",
-		link: "Articles/html/الفرق بين القدرات والتحصيلي وكيفية الاستعداد لكل منهما.html",
+
 
 	},
 	{
@@ -126,8 +125,6 @@ const articles = [
 		image: "material/22.png",
 		link: "Articles/html/how-to-choose-best-private-tutor-for-all-levels.html",
 
-		image: "material/5.jpg",
-		link: "Articles/html/كيف تختار أفضل مدرس خصوصي لجميع المراحل.html",
 
 	},
 	{
