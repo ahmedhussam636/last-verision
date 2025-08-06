@@ -96,14 +96,14 @@ const articles = [
 		title: "أهمية التعليم الخصوصي في تحسين الأداء الدراسي",
 		excerpt: "اكتشف أهمية التعليم الخصوصي في تعزيز التحصيل الدراسي وتحسين الأداء الأكاديمي للطلاب من خلال أساليب مخصصة وبيئة تعليمية داعمة.",
 		image: "material/OIP (1).jpeg",
-		link: "Articles/html/أهمية التعليم الخصوصي في تحسين الأداء الدراسي.html",
+		link: "Articles/html/importance-of-private-tutoring-for-better-grades.html",
 	},
 	{
 		id: 17,
 		title: "الفرق بين القدرات والتحصيلي وكيفية الاستعداد لكل منهما",
 		excerpt: "تعرف على الفرق بين اختبار القدرات واختبار التحصيلي في السعودية، مع دليل شامل حول كيفية الاستعداد لكل منهما لتحقيق أفضل النتائج في القبول الجامعي.",
 		image: "material/20.png",
-		link: "Articles/html/الفرق بين القدرات والتحصيلي وكيفية الاستعداد لكل منهما.html",
+		link: "Articles/html/difference-between-qiyas-and-achievement-tests-and-how-to-prepare.html",
 	},
 	{
 		id: 18,
@@ -117,14 +117,14 @@ const articles = [
 		title: "كيف تختار أفضل مدرس خصوصي لجميع المراحل؟ | معلمون",
 		excerpt: "اكتشف أهم المعايير التي يجب مراعاتها عند اختيار مدرس خصوصي لجميع المراحل الدراسية، وكيفية التمييز بين المدرسين المؤهلين والطرق الذكية لتقييم الأداء وتحقيق نتائج فعالة.",
 		image: "material/22.png",
-		link: "Articles/html/كيف تختار أفضل مدرس خصوصي لجميع المراحل.html",
+		link: "Articles/html/how-to-choose-best-private-tutor-for-all-levels.html",
 	},
 	{
 		id: 20,
 		title: "متى يحتاج الطالب إلى مدرس خصوصي؟ | متى أحتاج مدرس خصوصي؟",
 		excerpt: "اكتشف متى يحتاج الطالب إلى مدرس خصوصي؟ تعرف على العلامات التي تدل على الحاجة للدروس الخصوصية وأفضل التوقيتات للبدء",
 		image: "material/23.png",
-		link: "Articles/html/متى-يحتاج-الطالب-إلى-مدرس-خصوصي.html",
+		link: "Articles/html/when-student-needs-private-tutor.html",
 	},
 ];
 
